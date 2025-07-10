@@ -1,0 +1,21 @@
+{
+  "name": "ClassyTools – Worldclass Toolbox",
+  "short_name": "ClassyTools",
+  "description": "20+ powerful tools in a classy, installable PWA. Calculator, converters, password generator, AI search, and more.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#e94560",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
