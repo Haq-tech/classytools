@@ -1,12 +1,12 @@
-const CACHE_NAME = 'classytools-v1';
+const CACHE_NAME = 'classytools-v2';      // bump version so old cache purges
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/app.js',
-  '/manifest.json',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png'
+  './',                 // this resolves to /classytools/ under your scope
+  'index.html',
+  'style.css',
+  'script.js',
+  'manifest.json',
+  'icons/icon-192.png',
+  'icons/icon-512.png'
 ];
 
 self.addEventListener('install', event => {
@@ -27,8 +27,6 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request).then(response =>
-      response || fetch(event.request)
-    )
+    caches.match(event.request).then(resp => resp || fetch(event.request))
   );
 });
